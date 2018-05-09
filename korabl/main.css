@@ -1,0 +1,567 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000030;
+}
+
+.grid-cont {
+    display: grid;
+    width: 100%;
+    height: 1300px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 220px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "man man man man man man"
+        "eng eng mov mov mov fue"
+        "eng eng mov mov mov fue"
+        "eng eng mov mov mov fue"
+        "tem tem mov mov mov lin"
+        "oxy oxy tel tel tel pil"
+}
+
+#manager {
+    grid-area: man;
+    position: relative;
+    display: flex;
+    color: #fff;
+    padding-top: 50px;
+}
+.btn{
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+/*----------------------------------------------ДВИГАТЕЛИ-----------------------------------*/
+#engins {
+    grid-area: eng;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 50px;
+}
+.dvig {
+    width: 50px;
+    height: 300px;
+    border: 2px solid #4c5fff;
+    position: relative;
+    background: linear-gradient(#ff0000 0%,#ffff00 50%, #00ee00 100%);
+}
+.d-h {
+    width: 50px;
+    background-color: #000030;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 20s linear;
+}
+.shkala {
+    position: absolute;
+    color: #4c5fff;
+    top: 0;
+    left: 50px;
+}
+hr {
+    border: none;
+    background-color: #4c5fff;
+    height: 2px;
+    color: #4c5fff;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.dlinn-shkala{
+    width: 30px;
+    margin-bottom: 35.5px;
+}
+.korotk-shkala{
+    width: 15px;
+    margin-bottom: 35.5px;
+}
+.chislo-shkala{
+    position: absolute;
+    top: -8px;
+    right: -30px;
+}
+.chislo-shkala>div {
+    margin-bottom: 57.5px;
+}
+.nadpis{
+    color: #4c5fff;
+    position: absolute;
+    bottom: -50px;
+    left: -20px;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+#movie {
+    grid-area: mov;
+    position: relative;
+}
+.player{
+    margin: 50px 60px;
+    margin-bottom: 20px;
+    border: 10px solid gray;
+    border-radius: 20px;
+    background-color: gray;
+    height: 600px;
+}
+.pod_video{
+    color: #4c5fff;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Arial";
+}
+/*#Front{*/
+    /*margin: -35px 0;*/
+/*}*/
+.kamera {
+    position: absolute;
+}
+#kosmos {
+    width: 800px;
+    height: 600px;
+}
+
+
+/*----------------------------------------------СВЯЗЬ------------------------------------------*/
+#links {
+    grid-area: lin;
+    position: relative;
+}
+.lampa{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+.svyaz{
+    text-align: center;
+    color: #4c5fff;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    padding-top: 20px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------ТЕМПЕРАТУРА-----------------------------------------------*/
+#temper {
+    grid-area: tem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tem-kolvo{
+    position: absolute;
+}
+/*--------------------------------------------------------------------------------------------*/
+/*----------------------------------------------ТОПЛИВО-----------------------------------*/
+#fuel {
+    grid-area: fue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toplivo {
+    background: linear-gradient(#00ee00 0%, #ffff00 50%, #ff0000 100%);
+}
+.topl-nadp{
+    left: -30px;
+    font-size: 1.5em;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------КИСЛОРОД---------------------------------------*/
+#oxy {
+    grid-area: oxy;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kislorod{
+    font-family: "Arial";
+    font-size: 3em;
+    color: #4c5fff;
+    padding: 20px;
+}
+.min{
+    padding-left: 5px;
+}
+.cifra {
+    width: 130px;
+    height: 80px;
+    border: 8px solid #4c5fff;
+    position: relative;
+}
+#oxy-kolvo{
+    position: absolute;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*------------------------------------ТЕЛЕМЕТРИЯ--------------------------------------------*/
+#telem {
+    grid-area: tel;
+    position: relative;
+}
+.text-telem{
+    color: #4c5fff;
+    font-family: "Arial";
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 30px;
+    margin-bottom: 15px;
+}
+#lamps {
+    display: flex;
+    justify-content: space-around;
+}
+.lamp{
+    width: 100px;
+    height: 100px;
+}
+#klass-tel{
+    display: flex;
+    color: #4c5fff;
+    justify-content: space-around;
+    font-size: 2em;
+    font-family: "Arial";
+}
+/*-------------------------------------------------------------------------------------------*/
+
+@keyframes miganie {
+    0%, 100% {
+        background-color: #000030;
+    }
+    50% {
+        background-color: #a00000;
+    }
+}
+@keyframes miganie2 {
+    0%, 100% {
+        background-color: #00a000;
+    }
+    50% {
+        background-color: #a00000;
+    }
+}
+
+
+
+/*----------------------------------------РУЧНОЕ УПРАВЛЕНИЕ-------------------------------------*/
+#pilot {
+    grid-area: pil;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ruchnoe{
+    color: #bed1ff;
+    font-family: "Arial";
+    border: 8px solid #55ceff;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px;
+}
+
+/*-----------------------------------------ВСПЛЫВАЮЩИЕ ОКНА----------------------------*/
+.landingpage {
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    top: 940px;
+    left: 0;
+
+
+}
+#manevr-not-found {
+    width: 1000px;
+    height: 70px;
+    margin-top: 20px;
+    padding-top: 25px;
+    margin-left: 630px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    animation-name: miganie;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#kritch-temper {
+    width: 1200px;
+    height: 120px;
+    margin-top: 20px;
+    padding-top: 25px;
+    margin-left: 430px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    animation-name: miganie;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -400px;
+}
+
+#orbita1, #orbita2, #orbita3 {
+    width: 1000px;
+    height: 110px;
+    margin-top: 20px;
+    padding-top: 25px;
+    margin-left: 630px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    background-color: green;
+}
+
+#probit-kislorod{
+    width: 625px;
+    height: 50px;
+    padding-top: 25px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 1.33em;
+    color: white;
+    border: 4px solid #4c5fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    animation-name: miganie;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+#otkaz-upravl {
+    width: 1000px;
+    height: 110px;
+    margin-top: 20px;
+    padding-top: 25px;
+    margin-left: 630px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    background-color: darkred;
+}
+
+#vybor-upravleniya {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: space-around;
+    color: #4c5fff;
+    font-size: 3em;
+    font-family: "Arial";
+    top: -200px;
+}
+
+.napravlenie {
+    background-color: #003003;
+    width: 300px;
+    height: 120px;
+    border: 6px solid #55ceff;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 50px;
+}
+#aktivirovano {
+    width: 800px;
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 50px;
+    margin-left: 690px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    position: absolute;
+    top: -400px;
+    background-color: #009906;
+}
+#posadka {
+    width: 900px;
+    height: 140px;
+    margin-top: 20px;
+    padding-top: 50px;
+    margin-left: 650px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 2.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    position: absolute;
+    top: -400px;
+    animation-name: miganie2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+#uspeshnaya-posadka{
+    width: 1200px;
+    height: 330px;
+    margin-top: 20px;
+    padding-top: 100px;
+    margin-left: 350px;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 3.5em;
+    color: white;
+    border: 8px solid #4c5fff;
+    border-radius: 30px;
+    position: absolute;
+    top: -400px;
+    background-color: #00a000;
+
+}
+
+
+
+/*----------------------------ЭЛЕМЕНТЫ УПРАВЛЕНИЯ-------------------------------*/
+
+/*-----------------------------связь-------------------------------------------*/
+.lamp-link {
+    /*background: url("img/red_led.png");*/
+    background: url("img/green_led.png");
+    background-size: cover;
+}
+
+/*--------------------------температура двигателей----------------------------------*/
+
+#d1-h {
+    height: 150px;
+}
+#d2-h {
+    height: 150px;
+}
+#d3-h {
+    height: 170px;
+}
+
+/*--------------------------топливо----------------------------------------*/
+#topl-h {
+    transition: 600s;
+    height: 10px;
+}
+
+/*------------------------------------телеметрия--------------------------------------*/
+#red{
+    /*background: url("img/red_led.png");*/
+    background: url("img/green_led.png");
+    background-size: cover;
+}
+#yellou{
+    /*background: url("img/red_led.png");*/
+    background: url("img/green_led.png");
+    background-size: cover;
+}
+#green{
+    /*background: url("img/red_led.png");*/
+    background: url("img/green_led.png");
+    background-size: cover;
+}
+#blue{
+    /*background: url("img/red_led.png");*/
+    background: url("img/green_led.png");
+    background-size: cover;
+}
+
+/*#telem{animation-name: miganie;    animation-duration: 1s;    animation-iteration-count: infinite;}*/
+
+
+/*----------------------------------кислород----------------------------------------*/
+#oxy-kolvo:after {
+    width: 110px;
+    padding: 0 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #4c5fff;
+    font-size: 4.5em;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+
+    content: "120";
+}
+#probit-kislorod{display: none;}
+/*#oxy{animation-name: miganie;    animation-duration: 1s;    animation-iteration-count: infinite;}*/
+
+/*--------------------------------сдохла система МАНЕВРИРОВАНИЯ-------------------------*/
+
+#manevr-not-found{display: none;}
+
+/*-------------------------------температура--------------------------------------------*/
+
+/*#temper{animation-name: miganie;    animation-duration: 1s;    animation-iteration-count: infinite;}*/
+#kritch-temper{display: none;}
+#tem-kolvo:after{
+    content: "23";
+
+    width: 110px;
+    padding: 0 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #4c5fff;
+    font-size: 4.5em;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*-------------------------------ручное управление--------------------*/
+.ruchnoe {
+    /*background: #a00000;*/
+    background: green;
+}
+#vybor-upravleniya{display: none;}
+#aktivirovano {display: none;}
+#otkaz-upravl{display: none;}
+
+#posadka{display: none;}
+/*---------------------------------УСПЕШНАЯ ПОСАДКА-----------------------*/
+#uspeshnaya-posadka{display: none;}
+/*--------------------------------------камера--------------------------------*/
+#vidStart{display: none;}
+#vidKtae{display: none;}
+#vidSunEnter{display: none;}
+#vidSunExit{display: none;}
+#vidSputnik{display: none;}
+/*#kosmos{display: none;}*/
+#vidLanding{display: none;}
+
+/*-------------ИМЯ камеры--------------------*/
+#Kanaveral{display: none;}
+/*#Front{display: none;}*/
+#Gruz{display: none;}
+
+/*--------------------------ОРБИТЫ------------------*/
+
+#orbita1{display: none;}
+#orbita2{display: none;}
+#orbita3{display: none;}

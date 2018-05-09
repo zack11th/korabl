@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="video.js"></script>
+
+</head>
+<body>
+    <div class="grid-cont">
+        <div id="manager">
+            <input type="button" class="btn" value="Старт шаттла" onclick="playStart()">
+            <input type="button" class="btn" value="КТАЭ" onclick="playKtae()">
+            <input type="button" class="btn" value="Солнце ВХОД" onclick="playSunEnter()">
+            <input type="button" class="btn" value="Солнце УХОД" onclick="playSunExit()">
+            <input type="button" class="btn" value="Спутник" onclick="playSputnik()">
+            <input type="button" class="btn" value="ПОСАДКА" onclick="playLanding()">
+        </div>
+        <div id="engins">
+            <div class="dvig d1">
+                <div id="d1-h" class="d-h"></div>
+                <div class="shkala">
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="chislo-shkala">
+                        <div>100</div>
+                        <div>75</div>
+                        <div>50</div>
+                        <div>25</div>
+                        <div>0</div>
+                    </div>
+                </div>
+                <div class="nadpis">
+                    ДВИГАТЕЛЬ-1
+                </div>
+            </div>
+            <div class="dvig d2">
+                <div id="d2-h" class="d-h"></div>
+                <div class="shkala">
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="chislo-shkala">
+                        <div>100</div>
+                        <div>75</div>
+                        <div>50</div>
+                        <div>25</div>
+                        <div>0</div>
+                    </div>
+                </div>
+                <div class="nadpis">
+                    ДВИГАТЕЛЬ-2
+                </div>
+            </div>
+            <div class="dvig d3">
+                <div id="d3-h" class="d-h"></div>
+                <div class="shkala">
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="chislo-shkala">
+                        <div>100</div>
+                        <div>75</div>
+                        <div>50</div>
+                        <div>25</div>
+                        <div>0</div>
+                    </div>
+                </div>
+                <div class="nadpis">
+                    ДВИГАТЕЛЬ-3
+                </div>
+            </div>
+        </div>
+        <div id="movie">
+            <div class="player" >
+                <div id="start">
+                    <video id="vidStart" class="kamera" src="video/Start.webm" width="800px" height="600px"></video>
+                    <video id="vidKtae" class="kamera" src="video/KTAE.webm" width="800px" height="600px"></video>
+                    <video id="vidSunEnter" class="kamera" src="video/SUN_in.webm" width="800px" height="600px"></video>
+                    <video id="vidSunExit" class="kamera" src="video/SUN_out.webm" width="800px" height="600px"></video>
+                    <video id="vidSputnik" class="kamera" src="video/Sputnik.webm" width="800px" height="600px"></video>
+                    <img id="kosmos" src="img/ОРБИТЕР%20фон%20космоса.jpg" alt="">
+                    <video id="vidLanding" class="kamera" src="video/Posadka.webm" width="800px" height="600px"></video>
+                </div>
+            </div>
+            <div class="pod_video" id="Kanaveral">камеры наблюдения на мысе Канаверал</div>
+            <div class="pod_video" id="Front">фронтальная камера орбитального модуля</div>
+            <div class="pod_video" id="Gruz">камера грузового отсека орбитального модуля</div>
+
+        </div>
+        <div id="links">
+            <div class="lampa lamp-link"></div>
+            <div class="svyaz">СВЯЗЬ</div>
+        </div>
+        <div id="fuel">
+            <div class="dvig toplivo">
+                <div id="topl-h" class="d-h"></div>
+                <div class="shkala">
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="korotk-shkala"><hr></div>
+                    <div class="dlinn-shkala"><hr></div>
+                    <div class="chislo-shkala">
+                        <div>100</div>
+                        <div>75</div>
+                        <div>50</div>
+                        <div>25</div>
+                        <div>0</div>
+                    </div>
+                </div>
+                <div class="nadpis topl-nadp">
+                    ТОПЛИВО
+                </div>
+            </div>
+        </div>
+        <div id="oxy">
+            <div class="kislorod">КИСЛОРОД</div>
+            <div class="cifra">
+                <div id="oxy-kolvo"></div>
+            </div>
+            <div class="kislorod min">мин.</div>
+        </div>
+        <div id="telem">
+            <div class="text-telem">ТЕЛЕМЕТРИЯ</div>
+            <div id="lamps">
+                <div class="lamp" id="red"></div>
+                <div class="lamp" id="yellou"></div>
+                <div class="lamp" id="green"></div>
+                <div class="lamp" id="blue"></div>
+            </div>
+            <div id="klass-tel">
+                <div>красный</div>
+                <div>желтый</div>
+                <div>зеленый</div>
+                <div>синий</div>
+            </div>
+        </div>
+        <div id="pilot">
+            <div class="ruchnoe">
+                РУЧНОЕ УПРАВЛЕНИЕ
+            </div>
+        </div>
+        <div id="temper">
+            <div class="kislorod">ТЕМПЕРАТУРА</div>
+            <div class="cifra">
+                <div id="tem-kolvo"></div>
+            </div>
+            <div class="kislorod min">&deg C</div>
+        </div>
+    </div>
+    <div class="landingpage">
+        <div id="manevr-not-found">
+            Система маневрирования неисправна
+        </div>
+        <div id="kritch-temper">
+            ВНИМАНИЕ!<br>
+            критическая температура в кабине экипажа
+        </div>
+        <div id="orbita1">
+            орбитальный модуль вышел на орбиту №1 <br>
+            приготовиться к выводу полезного груза
+        </div>
+        <div id="orbita2">
+            орбитальный модуль вышел на орбиту №2 <br>
+            приготовиться к выводу полезного груза
+        </div>
+        <div id="orbita3">
+            орбитальный модуль вышел на орбиту №3 <br>
+            приготовиться к выводу полезного груза
+        </div>
+        <div id="probit-kislorod">
+            ВНИМАНИЕ! Нарушение целостности кислородного баллона
+        </div>
+        <div id="otkaz-upravl">
+            ОТКАЗ! ручное управление невозможно<br>
+            активирована система телеметрии
+        </div>
+        <div id="vybor-upravleniya">
+            <div class="napravlenie">Орбита №1</div>
+            <div class="napravlenie">Орбита №2</div>
+            <div class="napravlenie">Орбита №3</div>
+            <div class="napravlenie">Посадка</div>
+        </div>
+        <div id="aktivirovano">
+            АКТИВИРОВАН протокол полета!
+        </div>
+        <div id="posadka">
+            Первому пилоту приготовиться к посадке <br>
+            АВТОПИЛОТ БУДЕТ ОТКЛЮЧЕН!
+        </div>
+        <div id="uspeshnaya-posadka">
+            ПОСАДКА ЗАВЕРШЕНА УСПЕШНО! <br>
+            За бортом благоприятная среда <br>
+            Выход без защитных скафандров разрешен
+        </div>
+    </div>
+</body>
+</html>
